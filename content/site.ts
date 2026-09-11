@@ -87,11 +87,52 @@ export interface SiteContent {
     items: Specialty[];
     imageAlt: string;
   };
+  office: {
+    id: string;
+    eyebrow: string;
+    heading: string;
+    paragraphs: string[];
+    images: { alt: string }[];
+    notes: { label: string; body: string }[];
+  };
   finalCta: {
     heading: string;
     body: string;
     ctaLabel: string;
     imageAlt: string;
+  };
+  contact: {
+    id: string;
+    eyebrow: string;
+    heading: string;
+    body: string;
+    disclaimer: string;
+    form: {
+      nameLabel: string;
+      namePlaceholder: string;
+      emailLabel: string;
+      emailPlaceholder: string;
+      phoneLabel: string;
+      phonePlaceholder: string;
+      phoneOptionalHint: string;
+      messageLabel: string;
+      messagePlaceholder: string;
+      submitLabel: string;
+      submittingLabel: string;
+    };
+    validation: {
+      nameMin: string;
+      emailRequired: string;
+      emailInvalid: string;
+      phoneMax: string;
+      messageMin: string;
+    };
+    success: {
+      heading: string;
+      body: string;
+      againLabel: string;
+    };
+    submitError: string;
   };
   footer: {
     tagline: string;
@@ -235,6 +276,37 @@ export const site: SiteContent = {
       },
     ],
   },
+  office: {
+    id: "office",
+    eyebrow: "Our office",
+    heading: "A quiet, private space designed to feel grounding",
+    paragraphs: [
+      "My Santa Monica office is a quiet, private space with natural light and a comfortable, uncluttered environment. Clients often share that the space itself helps them feel more at ease when they arrive.",
+      "Prefer to meet remotely? I also offer secure telehealth sessions for clients located anywhere in California.",
+    ],
+    images: [
+      {
+        alt: "Therapy office sitting area with a sofa and armchair beside tall brick windows in natural light",
+      },
+      {
+        alt: "Therapy office with a sofa, armchair, and bookshelves in a bright, uncluttered room",
+      },
+    ],
+    notes: [
+      {
+        label: "In person",
+        body: "Santa Monica office with natural light and comfortable seating",
+      },
+      {
+        label: "Telehealth",
+        body: "Secure video sessions for clients located in California",
+      },
+      {
+        label: "Private & calm",
+        body: "A quiet, uncluttered space where you can arrive and exhale",
+      },
+    ],
+  },
   finalCta: {
     heading:
       "A space to slow down, reconnect, and build something more sustainable",
@@ -242,6 +314,42 @@ export const site: SiteContent = {
     ctaLabel: "Book a consultation",
     imageAlt:
       "Sofa with coffee and a small plant, bathed in warm late-day sun",
+  },
+  contact: {
+    id: "contact",
+    eyebrow: "Contact",
+    heading: "Start with a consultation",
+    body: "Send a brief message about what you're looking for, and we'll talk about whether working together is a good fit.",
+    disclaimer:
+      "Demo form — messages aren't sent anywhere and won't schedule a real appointment.",
+    form: {
+      nameLabel: "Full name",
+      namePlaceholder: "Jane Rivera",
+      emailLabel: "Email",
+      emailPlaceholder: "jane@example.com",
+      phoneLabel: "Phone",
+      phonePlaceholder: "(310) 555-0114",
+      phoneOptionalHint: "Optional",
+      messageLabel: "What brings you here?",
+      messagePlaceholder:
+        "A few sentences about what's been on your mind lately…",
+      submitLabel: "Send message",
+      submittingLabel: "Sending…",
+    },
+    validation: {
+      nameMin: "Please enter your name (at least 2 characters).",
+      emailRequired: "Please enter your email address.",
+      emailInvalid: "Please enter a valid email address.",
+      phoneMax: "Please keep phone under 30 characters.",
+      messageMin: "Please write a little more (at least 10 characters).",
+    },
+    success: {
+      heading: "Message received — thank you",
+      body: "This is a demo, so nothing was actually sent. In a live practice, this is where you'd get a personal reply about next steps.",
+      againLabel: "Send another message",
+    },
+    submitError:
+      "Something went wrong sending your message. Please try again.",
   },
   footer: {
     tagline:
