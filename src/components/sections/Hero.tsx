@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { site } from "../../../content/site";
 import { Button } from "@/components/ui/button";
+import heroMain from "../../../public/images/hero-main.jpg";
+import heroSecondary from "../../../public/images/hero-secondary.jpg";
 
 export default function Hero() {
   return (
@@ -37,12 +40,26 @@ export default function Hero() {
           </div>
         </div>
 
-        <div
-          aria-hidden="true"
-          className="relative mx-auto w-full max-w-md lg:max-w-none"
-        >
-          <div className="aspect-[4/5] w-[72%] rounded-2xl border border-dashed border-border bg-secondary shadow-soft" />
-          <div className="absolute right-0 bottom-0 aspect-square w-[52%] rounded-2xl border border-dashed border-border bg-muted shadow-lift" />
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="aspect-[4/5] w-[72%] overflow-hidden rounded-2xl shadow-soft">
+            <Image
+              src={heroMain}
+              alt={site.hero.mainImageAlt}
+              priority
+              placeholder="blur"
+              sizes="(max-width: 1024px) 65vw, 33vw"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="absolute right-0 bottom-0 aspect-square w-[52%] overflow-hidden rounded-2xl border-4 border-background shadow-lift">
+            <Image
+              src={heroSecondary}
+              alt={site.hero.secondaryImageAlt}
+              placeholder="blur"
+              sizes="(max-width: 1024px) 45vw, 23vw"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

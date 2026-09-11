@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { site } from "../../../content/site";
+import approachImage from "../../../public/images/approach.jpg";
 
 export default function HowWeWork() {
   return (
@@ -35,10 +37,15 @@ export default function HowWeWork() {
             </a>
           </p>
         </div>
-        <div
-          aria-hidden="true"
-          className="aspect-[4/3] w-full rounded-2xl border border-dashed border-border bg-secondary shadow-soft"
-        />
+        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-soft">
+          <Image
+            src={approachImage}
+            alt={site.approach.imageAlt}
+            placeholder="blur"
+            sizes="(max-width: 1024px) 90vw, 45vw"
+            className="h-full w-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { site } from "../../../content/site";
 import { Button } from "@/components/ui/button";
+import finalCtaImage from "../../../public/images/final-cta.jpg";
 
 export default function FinalCta() {
   return (
@@ -25,10 +27,15 @@ export default function FinalCta() {
             </Button>
           </div>
         </div>
-        <div
-          aria-hidden="true"
-          className="aspect-[4/3] w-full rounded-2xl border border-dashed border-border bg-secondary shadow-soft"
-        />
+        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-soft">
+          <Image
+            src={finalCtaImage}
+            alt={site.finalCta.imageAlt}
+            placeholder="blur"
+            sizes="(max-width: 1024px) 90vw, 45vw"
+            className="h-full w-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );

@@ -18,9 +18,12 @@ export interface NavLink {
 export interface CopyCard {
   title: string;
   body: string;
+  imageAlt: string;
 }
 
-export interface Specialty extends CopyCard {
+export interface Specialty {
+  title: string;
+  body: string;
   learnMoreLabel: string;
 }
 
@@ -43,12 +46,15 @@ export interface SiteContent {
     support: string;
     primaryCta: string;
     secondaryCta: string;
+    mainImageAlt: string;
+    secondaryImageAlt: string;
   };
   mission: {
     id: string;
     eyebrow: string;
     heading: string;
     paragraphs: string[];
+    portraitAlt: string;
   };
   whoWeHelp: {
     id: string;
@@ -72,17 +78,20 @@ export interface SiteContent {
     paragraphs: string[];
     linkLabel: string;
     linkHref: string;
+    imageAlt: string;
   };
   specialties: {
     id: string;
     eyebrow: string;
     heading: string;
     items: Specialty[];
+    imageAlt: string;
   };
   finalCta: {
     heading: string;
     body: string;
     ctaLabel: string;
+    imageAlt: string;
   };
   footer: {
     tagline: string;
@@ -126,6 +135,9 @@ export const site: SiteContent = {
       "In-person therapy in Santa Monica and secure telehealth across California — for adults who feel overwhelmed, stuck in overthinking, or emotionally on edge.",
     primaryCta: "Book a consultation",
     secondaryCta: "Learn about my approach",
+    mainImageAlt:
+      "Woman sitting thoughtfully beside tall wooden windows in warm afternoon light",
+    secondaryImageAlt: "Woman resting outdoors in warm late-day sunlight",
   },
   mission: {
     id: "about",
@@ -135,6 +147,8 @@ export const site: SiteContent = {
       "Many of the people I work with are high-achieving, thoughtful, and self-aware — but internally feel exhausted, stuck in overthinking, or emotionally on edge. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth.",
       "My goal is not just symptom relief, but helping you develop insight, resilience, and a stronger relationship with yourself over time.",
     ],
+    portraitAlt:
+      "Portrait of Dr. Maya Reynolds, smiling warmly in a bright room",
   },
   whoWeHelp: {
     id: "who-we-help",
@@ -144,14 +158,20 @@ export const site: SiteContent = {
       {
         title: "Anxiety & panic",
         body: "For adults who feel functional on the outside while quietly struggling with constant worry, tension in the body, or difficulty sleeping.",
+        imageAlt:
+          "Glowing sheer curtains over an arched window, seen over a person's shoulder",
       },
       {
         title: "Trauma & painful experiences",
         body: "For single-incident trauma as well as long-standing patterns that affect relationships, confidence, or a sense of safety.",
+        imageAlt:
+          "Woman resting her head pensively in soft, warm sunlight",
       },
       {
         title: "Burnout & perfectionism",
         body: "For entrepreneurs, creatives, and professionals who feel disconnected from themselves after years of pushing through stress.",
+        imageAlt:
+          "A quiet empty chair beside a window in warm evening light",
       },
     ],
   },
@@ -183,11 +203,15 @@ export const site: SiteContent = {
     ],
     linkLabel: "Explore specialties",
     linkHref: "#specialties",
+    imageAlt:
+      "Therapist listening attentively, notebook in hand, while a client speaks during a session",
   },
   specialties: {
     id: "specialties",
     eyebrow: "Specialties",
     heading: "Focused support, shaped around you",
+    imageAlt:
+      "Sunlit sitting room with an armchair beside a bright window",
     items: [
       {
         title: "Anxiety & panic",
@@ -216,6 +240,8 @@ export const site: SiteContent = {
       "A space to slow down, reconnect, and build something more sustainable",
     body: "If you're looking for practical tools combined with depth-oriented work — with someone who understands fast-paced, high-pressure lives — I may be a good fit.",
     ctaLabel: "Book a consultation",
+    imageAlt:
+      "Sofa with coffee and a small plant, bathed in warm late-day sun",
   },
   footer: {
     tagline:

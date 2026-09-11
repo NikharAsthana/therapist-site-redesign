@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { site } from "../../../content/site";
+import specialtiesImage from "../../../public/images/specialties.jpg";
 
 export default function SpecialtiesGrid() {
   return (
@@ -41,10 +43,15 @@ export default function SpecialtiesGrid() {
               </li>
             ))}
           </ul>
-          <div
-            aria-hidden="true"
-            className="aspect-[3/4] w-full rounded-2xl border border-dashed border-border bg-secondary shadow-soft lg:sticky lg:top-24"
-          />
+          <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-soft lg:sticky lg:top-24">
+            <Image
+              src={specialtiesImage}
+              alt={site.specialties.imageAlt}
+              placeholder="blur"
+              sizes="(max-width: 1024px) 90vw, 320px"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
