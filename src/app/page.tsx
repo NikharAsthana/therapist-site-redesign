@@ -17,7 +17,7 @@ export default function Home() {
     <div id="top" className="flex min-h-full flex-col">
       <PsychologistJsonLd />
       <Navbar />
-      <main className="flex flex-1 flex-col">
+      <main id="main-content" className="flex flex-1 flex-col">
         <Hero />
         <MissionSection />
         <WhoWeHelpGrid />

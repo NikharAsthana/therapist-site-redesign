@@ -160,6 +160,9 @@ export interface SiteContent {
     locale: string;
     ogImageAlt: string;
   };
+  a11y: {
+    skipLink: string;
+  };
 }
 
 export const site: SiteContent = {
@@ -400,5 +403,8 @@ export const site: SiteContent = {
     locale: "en_US",
     ogImageAlt:
       "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica and across California",
+  },
+  a11y: {
+    skipLink: "Skip to main content",
   },
 };
