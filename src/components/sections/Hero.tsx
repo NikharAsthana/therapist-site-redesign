@@ -55,6 +55,7 @@ export default function Hero() {
             <Image
               src={heroSecondary}
               alt={site.hero.secondaryImageAlt}
+              priority
               placeholder="blur"
               sizes="(max-width: 1024px) 45vw, 23vw"
               className="h-full w-full object-cover"
