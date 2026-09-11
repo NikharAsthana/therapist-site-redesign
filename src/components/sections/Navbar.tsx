@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MenuIcon } from "lucide-react";
+import { site } from "../../../content/site";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -10,13 +11,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Specialties", href: "#specialties" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
-];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,15 +23,15 @@ export default function Navbar() {
       >
         <a href="#top" className="leading-tight">
           <span className="font-display block text-lg font-medium tracking-tight">
-            Dr. Maya Reynolds
+            {site.brand.name}
           </span>
           <span className="block text-xs tracking-wide text-muted-foreground">
-            PsyD · Santa Monica, CA
+            {site.brand.credential} · {site.brand.shortLocation}
           </span>
         </a>
 
         <ul className="hidden items-center gap-7 md:flex">
-          {links.map((link) => (
+          {site.nav.links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -50,8 +44,11 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <Button nativeButton={false} render={<a href="#contact" />}>
-            Book a consultation
+          <Button
+            nativeButton={false}
+            render={<a href={site.nav.ctaHref} />}
+          >
+            {site.nav.ctaLabel}
           </Button>
         </div>
 
@@ -62,7 +59,7 @@ export default function Navbar() {
                 variant="outline"
                 size="icon"
                 className="md:hidden"
-                aria-label="Open navigation menu"
+                aria-label={site.nav.menuLabel}
               />
             }
           >
@@ -71,11 +68,11 @@ export default function Navbar() {
           <SheetContent side="right">
             <SheetHeader>
               <SheetTitle className="font-display text-left">
-                Dr. Maya Reynolds
+                {site.brand.name}
               </SheetTitle>
             </SheetHeader>
             <ul className="mt-2 flex flex-col gap-1">
-              {links.map((link) => (
+              {site.nav.links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -91,9 +88,11 @@ export default function Navbar() {
               <Button
                 className="w-full"
                 nativeButton={false}
-                render={<a href="#contact" onClick={() => setOpen(false)} />}
+                render={
+                  <a href={site.nav.ctaHref} onClick={() => setOpen(false)} />
+                }
               >
-                Book a consultation
+                {site.nav.ctaLabel}
               </Button>
             </div>
           </SheetContent>

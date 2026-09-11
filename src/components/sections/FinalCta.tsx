@@ -1,3 +1,4 @@
+import { site } from "../../../content/site";
 import { Button } from "@/components/ui/button";
 
 export default function FinalCta() {
@@ -9,17 +10,18 @@ export default function FinalCta() {
             id="cta-heading"
             className="font-display text-3xl font-medium tracking-tight text-balance sm:text-4xl"
           >
-            A space to slow down, reconnect, and build something more
-            sustainable
+            {site.finalCta.heading}
           </h2>
           <p className="mt-5 max-w-xl leading-relaxed text-muted-foreground">
-            If you&apos;re looking for practical tools combined with
-            depth-oriented work — with someone who understands fast-paced,
-            high-pressure lives — I may be a good fit.
+            {site.finalCta.body}
           </p>
           <div className="mt-8">
-            <Button size="lg" nativeButton={false} render={<a href="#contact" />}>
-              Book a consultation
+            <Button
+              size="lg"
+              nativeButton={false}
+              render={<a href={site.nav.ctaHref} />}
+            >
+              {site.finalCta.ctaLabel}
             </Button>
           </div>
         </div>

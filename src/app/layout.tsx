@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3, Geist } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { site } from "../../content/site";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const display = Fraunces({
   variable: "--font-fraunces",
@@ -18,16 +16,15 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica & California",
-  description:
-    "Licensed clinical psychologist in Santa Monica offering in-person and telehealth therapy across California for anxiety, trauma, panic, and burnout.",
+  title: site.metadata.title,
+  description: site.metadata.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", display.variable, body.variable, "font-sans", geist.variable)}
+      className={`${display.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

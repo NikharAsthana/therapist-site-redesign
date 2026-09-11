@@ -1,16 +1,4 @@
-const nav = [
-  { label: "About", href: "#about" },
-  { label: "Specialties", href: "#specialties" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
-  { label: "Style guide", href: "/style-guide" },
-];
-
-const legal = [
-  { label: "Terms", href: "#" },
-  { label: "Privacy", href: "#" },
-  { label: "Disclaimer", href: "#" },
-];
+import { site } from "../../../content/site";
 
 export default function Footer() {
   return (
@@ -18,28 +6,30 @@ export default function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <p className="font-display text-xl font-medium tracking-tight">
-            Dr. Maya Reynolds, PsyD
+            {site.brand.name}, {site.brand.credential}
           </p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Licensed clinical psychologist offering warm, collaborative
-            therapy for anxiety, trauma, and burnout.
+            {site.footer.tagline}
           </p>
           <address className="mt-4 text-sm leading-relaxed text-muted-foreground not-italic">
-            123th Street 45 W
-            <br />
-            Santa Monica, CA 90401
+            {site.footer.addressLines.map((line, index) => (
+              <span key={line}>
+                {line}
+                {index < site.footer.addressLines.length - 1 && <br />}
+              </span>
+            ))}
           </address>
           <p className="mt-2 text-sm text-muted-foreground">
-            In person in Santa Monica · Telehealth across California
+            {site.footer.serviceArea}
           </p>
         </div>
 
         <nav aria-label="Footer">
           <p className="text-sm font-semibold tracking-[0.14em] uppercase">
-            Explore
+            {site.footer.exploreHeading}
           </p>
           <ul className="mt-4 space-y-2.5">
-            {nav.map((item) => (
+            {site.footer.exploreLinks.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
@@ -54,10 +44,10 @@ export default function Footer() {
 
         <div>
           <p className="text-sm font-semibold tracking-[0.14em] uppercase">
-            Legal
+            {site.footer.legalHeading}
           </p>
           <ul className="mt-4 space-y-2.5">
-            {legal.map((item) => (
+            {site.footer.legal.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
@@ -73,8 +63,8 @@ export default function Footer() {
 
       <div className="border-t">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-5 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© 2026 Dr. Maya Reynolds, PsyD. All rights reserved.</p>
-          <p>Design engineering exercise — fictional practice.</p>
+          <p>{site.footer.copyright}</p>
+          <p>{site.footer.creditNote}</p>
         </div>
       </div>
     </footer>
