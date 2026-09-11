@@ -1,4 +1,4 @@
-import ContactSection from "@/components/sections/ContactSection";
+import ContactSectionLazy from "@/components/sections/ContactSectionLazy";
 import ExpertiseTags from "@/components/sections/ExpertiseTags";
 import PsychologistJsonLd from "@/components/seo/PsychologistJsonLd";
 import FinalCta from "@/components/sections/FinalCta";
@@ -26,7 +26,7 @@ export default function Home() {
         <HowWeWork />
         <SpecialtiesGrid />
         <OurOffice />
-        <ContactSection />
+        <ContactSectionLazy />
         <FinalCta />
       </main>
       <Footer />

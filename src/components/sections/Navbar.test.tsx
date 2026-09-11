@@ -17,9 +17,11 @@ describe("Navbar", () => {
     const user = userEvent.setup();
     render(<Navbar />);
 
-    await user.click(
-      screen.getByRole("button", { name: "Open navigation menu" })
-    );
+    // The menu island loads after hydration — wait for the trigger first.
+    const trigger = await screen.findByRole("button", {
+      name: "Open navigation menu",
+    });
+    await user.click(trigger);
 
     expect(await screen.findByRole("dialog")).toBeInTheDocument();
   });

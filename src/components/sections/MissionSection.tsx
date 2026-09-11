@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { site } from "../../../content/site";
-import portrait from "../../../public/portrait-dr-reynolds.png";
+import portrait from "../../../public/portrait-dr-reynolds.jpg";
 
 export default function MissionSection() {
   return (
