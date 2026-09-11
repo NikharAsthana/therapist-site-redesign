@@ -137,6 +137,12 @@ export interface SiteContent {
   footer: {
     tagline: string;
     addressLines: string[];
+    postalAddress: {
+      street: string;
+      locality: string;
+      region: string;
+      postalCode: string;
+    };
     serviceArea: string;
     exploreHeading: string;
     exploreLinks: NavLink[];
@@ -148,6 +154,11 @@ export interface SiteContent {
   metadata: {
     title: string;
     description: string;
+  };
+  seo: {
+    siteUrl: string;
+    locale: string;
+    ogImageAlt: string;
   };
 }
 
@@ -355,6 +366,12 @@ export const site: SiteContent = {
     tagline:
       "Licensed clinical psychologist offering warm, collaborative therapy for anxiety, trauma, and burnout.",
     addressLines: ["123th Street 45 W", "Santa Monica, CA 90401"],
+    postalAddress: {
+      street: "123th Street 45 W",
+      locality: "Santa Monica",
+      region: "CA",
+      postalCode: "90401",
+    },
     serviceArea: "In person in Santa Monica · Telehealth across California",
     exploreHeading: "Explore",
     exploreLinks: [
@@ -377,5 +394,11 @@ export const site: SiteContent = {
     title: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica & California",
     description:
       "Licensed clinical psychologist in Santa Monica offering in-person and telehealth therapy across California for anxiety, trauma, panic, and burnout.",
+  },
+  seo: {
+    siteUrl: "https://therapist-site-redesign.vercel.app",
+    locale: "en_US",
+    ogImageAlt:
+      "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica and across California",
   },
 };
