@@ -187,7 +187,7 @@ export const site: SiteContent = {
     eyebrow: "Licensed Clinical Psychologist · Santa Monica, CA",
     title: "Therapy for anxiety, trauma, and burnout",
     support:
-      "In-person therapy in Santa Monica and secure telehealth across California — for adults who feel overwhelmed, stuck in overthinking, or emotionally on edge.",
+      "In-person therapy in Santa Monica and secure telehealth across California: for adults who feel overwhelmed, stuck in overthinking, or emotionally on edge.",
     primaryCta: "Book a consultation",
     secondaryCta: "Learn about my approach",
     mainImageAlt:
@@ -199,7 +199,7 @@ export const site: SiteContent = {
     eyebrow: "About Dr. Reynolds",
     heading: "Warm, collaborative therapy for overwhelmed adults",
     paragraphs: [
-      "Many of the people I work with are high-achieving, thoughtful, and self-aware — but internally feel exhausted, stuck in overthinking, or emotionally on edge. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth.",
+      "Many of the people I work with are high-achieving, thoughtful, and self-aware, but internally feel exhausted, stuck in overthinking, or emotionally on edge. Sessions are structured enough to feel supportive, while still leaving space for reflection and depth.",
       "My goal is not just symptom relief, but helping you develop insight, resilience, and a stronger relationship with yourself over time.",
     ],
     portraitAlt:
@@ -253,8 +253,8 @@ export const site: SiteContent = {
     eyebrow: "How we work",
     heading: "Practical tools with room for depth",
     paragraphs: [
-      "I integrate evidence-based methods — cognitive-behavioral therapy (CBT), EMDR, mindfulness-based practices, and body-oriented techniques — to help you understand both the emotional and the physiological sides of what you're experiencing.",
-      "Trauma work is paced carefully, with an emphasis on safety and stabilization first, so you feel more regulated in daily life — not just during sessions.",
+      "I integrate evidence-based methods like cognitive-behavioral therapy (CBT), EMDR, mindfulness-based practices, and body-oriented techniques to help you understand both the emotional and the physiological sides of what you're experiencing.",
+      "Trauma work is paced carefully, with an emphasis on safety and stabilization first, so you feel more regulated in daily life.",
     ],
     linkLabel: "Explore specialties",
     linkHref: "#specialties",
@@ -324,7 +324,7 @@ export const site: SiteContent = {
   finalCta: {
     heading:
       "A space to slow down, reconnect, and build something more sustainable",
-    body: "If you're looking for practical tools combined with depth-oriented work — with someone who understands fast-paced, high-pressure lives — I may be a good fit.",
+    body: "If you're looking for practical tools combined with depth-oriented work from someone who understands fast-paced & high-pressure lives, I might be a great fit.",
     ctaLabel: "Book a consultation",
     imageAlt:
       "Sofa with coffee and a small plant, bathed in warm late-day sun",
@@ -335,7 +335,7 @@ export const site: SiteContent = {
     heading: "Start with a consultation",
     body: "Send a brief message about what you're looking for, and we'll talk about whether working together is a good fit.",
     disclaimer:
-      "Demo form — messages aren't sent anywhere and won't schedule a real appointment.",
+      "Demo form: messages aren't sent anywhere and won't schedule a real appointment.",
     form: {
       nameLabel: "Full name",
       namePlaceholder: "Jane Rivera",
@@ -358,7 +358,7 @@ export const site: SiteContent = {
       messageMin: "Please write a little more (at least 10 characters).",
     },
     success: {
-      heading: "Message received — thank you",
+      heading: "Message received. Thank you",
       body: "This is a demo, so nothing was actually sent. In a live practice, this is where you'd get a personal reply about next steps.",
       againLabel: "Send another message",
     },
@@ -391,7 +391,7 @@ export const site: SiteContent = {
       { label: "Disclaimer", href: "#" },
     ],
     copyright: "© 2026 Dr. Maya Reynolds, PsyD. All rights reserved.",
-    creditNote: "", // Design engineering exercise — fictional practice.
+    creditNote: "", // Design engineering exercise: fictional practice.
   },
   metadata: {
     title: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica & California",
