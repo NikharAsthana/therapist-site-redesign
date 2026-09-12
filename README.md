@@ -8,7 +8,7 @@ A from-scratch rebuild & re-theme of a real-world therapy-practice homepage
 layout with new visual identity, new information architecture for a solo
 practitioner and production-grade engineering throughout.
 
-- **Live:** deploy pending — URL will be added here after launch.
+- **Live:** https://therapist-site-redesign-phi.vercel.app/
 - **Design system demo:** `/style-guide` (ships with the site as evidence of
   deliberate token thinking).
 

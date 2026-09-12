@@ -399,7 +399,7 @@ export const site: SiteContent = {
       "Licensed clinical psychologist in Santa Monica offering in-person and telehealth therapy across California for anxiety, trauma, panic, and burnout.",
   },
   seo: {
-    siteUrl: "https://therapist-site-redesign.vercel.app",
+    siteUrl: "https://therapist-site-redesign-phi.vercel.app",
     locale: "en_US",
     ogImageAlt:
       "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica and across California",
