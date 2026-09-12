@@ -391,7 +391,7 @@ export const site: SiteContent = {
       { label: "Disclaimer", href: "#" },
     ],
     copyright: "© 2026 Dr. Maya Reynolds, PsyD. All rights reserved.",
-    creditNote: "Design engineering exercise — fictional practice.",
+    creditNote: "", // Design engineering exercise — fictional practice.
   },
   metadata: {
     title: "Dr. Maya Reynolds, PsyD — Therapy in Santa Monica & California",
