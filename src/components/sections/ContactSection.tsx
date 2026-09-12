@@ -81,9 +81,11 @@ export default function ContactSection() {
           <p className="mt-5 leading-relaxed text-muted-foreground">
             {site.contact.body}
           </p>
-          <p className="mt-6 rounded-xl border border-dashed p-4 text-sm leading-relaxed text-muted-foreground">
-            {site.contact.disclaimer}
-          </p>
+          {process.env.NEXT_PUBLIC_SHOW_DEMO_NOTE === "1" && (
+            <p className="mt-6 rounded-xl border border-dashed p-4 text-sm leading-relaxed text-muted-foreground">
+              {site.contact.disclaimer}
+            </p>
+          )}
         </div>
 
         <div className="rounded-2xl border bg-background p-6 shadow-soft sm:p-8">
