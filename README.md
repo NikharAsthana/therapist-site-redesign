@@ -1,4 +1,4 @@
-# Therapist Website Redesign — a design & engineering case study
+# Therapist Website Redesign: a design & engineering case study
 
 > **Disclaimer:** Dr. Maya Reynolds is a **fictional persona** created for this
 > case study. This is not a real practice, the contact form sends nothing, and
