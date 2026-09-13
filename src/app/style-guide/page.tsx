@@ -113,7 +113,7 @@ export default function StyleGuidePage() {
   return (
     <main className="mx-auto w-full max-w-5xl px-5 py-12 sm:px-8 sm:py-16">
       <p className="text-sm font-semibold tracking-[0.18em] text-primary uppercase">
-        Design system · Phase 1
+        Design system 
       </p>
       <h1 className="font-display mt-3 max-w-2xl text-4xl font-medium tracking-tight text-balance sm:text-5xl">
         Style guide
@@ -251,7 +251,7 @@ export default function StyleGuidePage() {
         <Section
           id="cards"
           title="Cards"
-          lede="White cards on linen with soft, low-contrast shadows — the pattern behind the Who-we-help grid and Specialties grid in Phase 2."
+          lede="White cards on linen with soft, low-contrast shadows — the pattern behind the Who-we-help grid and Specialties grid."
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <Card className="shadow-soft">
@@ -302,7 +302,7 @@ export default function StyleGuidePage() {
         <Section
           id="accordion"
           title="Accordion"
-          lede="The FAQ pattern for Phase 2 — keyboard-navigable with visible focus states."
+          lede="The FAQ pattern— keyboard-navigable with visible focus states."
         >
           <Accordion className="rounded-xl border bg-card px-5 shadow-soft">
             <AccordionItem value="item-1">
@@ -325,7 +325,7 @@ export default function StyleGuidePage() {
         <Section
           id="form"
           title="Form fields"
-          lede="Field, label, and input primitives bound to react-hook-form + zod in Phase 6. Shown here as a non-functional preview — error and success states arrive with the contact form."
+          lede="Field, label, and input primitives. Shown here as a non-functional preview — error and success states arrive with the contact form."
         >
           <div className="max-w-md rounded-xl border bg-card p-6 shadow-soft">
             <Field>
@@ -334,7 +334,7 @@ export default function StyleGuidePage() {
               </FieldLabel>
               <Input id="sg-name" placeholder="Jane Rivera" />
               <FieldDescription>
-                Preview only — validation arrives in Phase 6.
+                Preview only.
               </FieldDescription>
             </Field>
           </div>
@@ -343,7 +343,7 @@ export default function StyleGuidePage() {
         <Section
           id="sheet"
           title="Sheet (mobile menu)"
-          lede="The slide-over panel behind the mobile navigation in Phase 2. Try it — focus is trapped while open and returns to the trigger on close."
+          lede="The slide-over panel behind the mobile navigation. Try it — focus is trapped while open and returns to the trigger on close."
         >
           <div className="rounded-xl border bg-card p-6 shadow-soft">
             <SheetDemo />
